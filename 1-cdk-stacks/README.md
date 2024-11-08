@@ -26,10 +26,9 @@ In order to use the project, from within a client that has AWS CLI configured to
 
 The first stack we need to deploy is ***PreContainerStack***, and It will create a:
 
- 1. a VPC (with public and private subnets) with the conbfigured CIDR
- 2. a bastion host that can be used to interact with the provisioned resources in a secure way (only allows connections using [AWS System Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/ssm-agent-linux.html))
- 3. a ECR reporitory (with the same name as the configured application name)
- 4. a ECS cluster (with no task definition)
+ 1. a VPC (with public and private subnets) with the configured CIDR
+ 2. a ECR reporitory (with the same name as the configured application name)
+ 3. a ECS cluster (with no task definition)
 
 In order to deploy the stack, from the command line please:
  1. cd /*path*/*to*/*folder*/*you*/*cloned*/*the*/*code*/1-cdk-stacks
@@ -58,3 +57,14 @@ The second and final stack we need to deploy is ***PostContainerStack***, and It
 In order to deploy the stack, from the command line please:
  1. cd /*path*/*to*/*folder*/*you*/*cloned*/*the*/*code*/1-cdk-stacks
  2. cdk deploy PostContainerStack
+
+ ### 4 In Action
+
+ To validate the end to end process works you will need to:
+  1. connect to AWS console, open Cognito userpool
+  2. create a new user...
+  3. from a browser open the URL xxx (as per CloudFormation outputs)
+  4. login with username (created at bullet 2) and its password
+  5. at the first login, change the password as prompted
+  6. login using username (created at bullet 2) and the new password
+  6. logout, and login again
