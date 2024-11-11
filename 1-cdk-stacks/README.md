@@ -127,15 +127,15 @@ To validate the end to end process works you will need to:
 
 2. create a new user by:
 
-  a. clicking on the userpool *demoappuserpoolXYZ123* and then on *Create User*
+    * clicking on the userpool *demoappuserpoolXYZ123* and then on *Create User*
+    
+    * enter username
+    
+    * make sure the *Temporary Password* is set to *Set. a Password*
   
-  b. enter username
+    * enter password (min length 8, contains digits, contains special character)
   
-  c. make sure the *Temporary Password* is set to *Set. a Password*
-  
-  d. enter password (min length 8, contains digits, contains special character)
-  
-  e. confirm by clicking *Create User*
+    * confirm by clicking *Create User*
 
 3. from a browser open the URL xxx (as per CloudFormation outputs)
 
